@@ -47,7 +47,7 @@ public class UserResource {
 	
 	@DeleteMapping(value = "/{id}") //Recebe o Id pela URL
 	public ResponseEntity<Void> delete (@PathVariable Long id) {
-		service.Delete(id);
+		service.delete(id);
 		return ResponseEntity.noContent().build(); //retorna um 204 sem conteudo algum (noContent)
 	}
 	
