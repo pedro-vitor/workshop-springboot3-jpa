@@ -21,7 +21,7 @@ A aplicação consiste em um web service que é responsavel por fazer operaçõe
 ![Retorno de usuarios](https://github.com/pedro-vitor/assets/blob/main/web-service-Spring-boot/return-categories.png)
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/pedro-vitor/assets/blob/main/modelo-relacional-spring.png)
+![Modelo Conceitual](https://github.com/pedro-vitor/assets/blob/main/web-service-Spring-boot/modelo-relacional-spring.png)
 
 # Tecnologias utilizadas
 ## Back end
