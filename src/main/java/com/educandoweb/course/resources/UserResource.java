@@ -39,20 +39,20 @@ public class UserResource {
 	}
 	
 	@PostMapping
-	public ResponseEntity<User> insert (@RequestBody User obj) {
+	public ResponseEntity<User> insert (@RequestBody User obj) { //Recebe o OBJ pelo corpo da requisição
 		obj = service.insert(obj);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
-		return ResponseEntity.created(uri).body(obj);
+		return ResponseEntity.created(uri).body(obj); //retorna um 201, com a URI no HEADER.
 	}
 	
-	@DeleteMapping(value = "/{id}")
+	@DeleteMapping(value = "/{id}") //Recebe o Id pela URL
 	public ResponseEntity<Void> delete (@PathVariable Long id) {
 		service.Delete(id);
-		return ResponseEntity.noContent().build();
+		return ResponseEntity.noContent().build(); //retorna um 204 sem conteudo algum (noContent)
 	}
 	
-	@PutMapping(value = "/{id}")
-	public ResponseEntity<User> update (@PathVariable Long id, @RequestBody User obj) {
+	@PutMapping(value = "/{id}") //Recebe o Id pela URL, e o OBJ pelo corpo da requisição
+	public ResponseEntity<User> update (@PathVariable Long id, @RequestBody User obj) { 
 		obj = service.update(id, obj);
 		return ResponseEntity.ok().body(obj);
 	}
